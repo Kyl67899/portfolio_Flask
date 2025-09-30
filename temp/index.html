@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Portfolio using Flask Python</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #222;
+            padding: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .intro {
+            padding: 2rem;
+            text-align: center;
+            background: #e3f2fd;
+        }
+
+        .intro-box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            list-style: none;
+        }
+
+        .skills li {
+            background: #90caf9;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .social {
+            background: #c8e6c9;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .projects {
+            background: #212121;
+            color: #fff;
+            padding: 2rem;
+        }
+
+        .project-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: #424242;
+            padding: 1rem;
+            border-radius: 8px;
+            width: 300px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        section#skills {
+            padding: 35px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #222;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('index') }}">My Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('project') }}">Projects</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('add_project') }}">Add Project</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" target="_blank">
+                            Resume
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- home -->
+        <section id="home" class="intro">
+            <div class="intro-box">
+                <img src="{{ url_for('static', filename='profile.jpg' )}}" alt="Kyle P">
+                <h1>
+                    Kyle
+                </h1>
+                <p>
+                    I’m a software engineer with 3+ years of experience building scalable products and startups.
+                    I thrive in fast-paced environments and love collaborating with like-minded builders.
+                </p>
+            </div>
+        </section>
+
+        <!-- skills -->
+        <section id="skills">
+            <h2>
+                Skills
+            </h2>
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>Flask</li>
+                <li>Django</li>
+                <li>PostgreSQL</li>
+                <li>Java</li>
+                <li>SQL</li>
+            </ul>
+        </section>
+
+        <!-- contact -->
+        <section id="contact" class="social">
+            <h2>Connect with Me</h2>
+            <ul>
+                <li><a class="icon-link icon-link-hover cursor-pointer" style="--bs-link-hover-color-rgb: 25, 135, 84;"
+                        href="https://github.com/kyl67899" target="_blank">GitHub</a></li>
+                <li><a class="icon-link icon-link-hover cursor-pointer" style="--bs-link-hover-color-rgb: 25, 135, 84;"
+                        href="https://linkedin.com/in/kyle-parsotan" target="_blank">LinkedIn</a></li>
+                <li><a class="icon-link icon-link-hover cursor-pointer" style="--bs-link-hover-color-rgb: 25, 135, 84;"
+                        href="https://kylepprofile.dev" target="_blank">Portfolio</a></li>
+                <li><a class="icon-link icon-link-hover cursor-pointer" style="--bs-link-hover-color-rgb: 25, 135, 84;"
+                        href="https://facebook.com/" target="_blank">Facebook</a></li>
+                <li><a class="icon-link icon-link-hover cursor-pointer" style="--bs-link-hover-color-rgb: 25, 135, 84;"
+                        href="https://instagram.com/csdevfe" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
+
+        <!-- projects -->
+        <section id="projects" class="projects">
+            <h2>
+                Recent Projects
+            </h2>
+            {% if recent_projects %}
+            <div class="container mt-4">
+                {% for project in recent_projects %}
+                {% if loop.index0 % 3 == 0 %}
+                <div class="row mb-4">
+                    {% endif %}
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="{{ url_for('project_detail', id=project.id)}}"
+                                        class="text-decoration-none text-dark cursor-pointer">
+                                        {{ project.title }}
+                                    </a>
+                                </h5>
+                                <p class="card-text">
+                                    {{ project.description }}
+                                </p>
+                                <small class="text-muted">
+                                    {{ project.date_created.strftime('%B %d, %Y') }}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if loop.index0 % 3 == 2 or loop.last %}
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <p>No projects found.</p>
+            {% endif %}
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-outline-secondary">
+                    <a class="text-success cursor-pointer" href="{{ url_for('project')}}">
+                        View All Project
+                    </a>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        &copy; 2025 Kyle Parsotan | <a href="{{ url_for('contact') }}" class="text-white">Contact</a> | <a
+            href="/dashboard">Admin</a>
+    </footer>
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+</body>
+
+</html>
