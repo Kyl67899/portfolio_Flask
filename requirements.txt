@@ -144,7 +144,7 @@ torch==2.2.0
 tornado==6.4
 tqdm @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_ac7zic_tin/croot/tqdm_1679561870178/work
 traitlets==5.14.1
-transformers==4.37.2
+transformers==4.53.0
 truststore @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_42mm7e6j06/croot/truststore_1695244298716/work
 Twisted==23.10.0
 types-python-dateutil==2.8.19.20240106
