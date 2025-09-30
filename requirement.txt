@@ -1,0 +1,11 @@
+Flask
+Flask-Mail
+Flask-SQLAlchemy
+gunicorn
+python-dotenv
+flask_bcrypt
+flask_admin
+dotenv
+os
+flask_migrate
+werkzeug.security
