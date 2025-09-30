@@ -26,7 +26,7 @@ app.secret_key = os.urandom(24).hex()
 app.config["SECRET_KEY"] = app.secret_key
 
 #config for the postgreSQL
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:0000@localhost/PortfolioDB"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv('POSTGRESQL_DB')
 app.config["SESSION_PERMANENT"] = False  # ✅ Prevent session persistence beyond logout
 app.config["SESSION_TYPE"] = "filesystem"  # ✅ Store sessions securely
 
