@@ -30,7 +30,7 @@ cookiecutter==2.1.1
 cryptography @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_b1p0q5vizk/croot/cryptography_1702070293829/work
 cycler==0.12.1
 dask==2024.2.0
-deepdiff==6.2.3
+deepdiff==8.6.1
 distlib==0.3.8
 distributed==2024.2.0
 distro @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_10ye1wu827/croot/distro_1701455019085/work
