@@ -140,7 +140,7 @@ threadpoolctl==3.3.0
 tokenizers==0.15.1
 toml==0.10.2
 toolz==0.12.1
-torch==2.2.0
+torch==2.8.0
 tornado==6.4
 tqdm @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_ac7zic_tin/croot/tqdm_1679561870178/work
 traitlets==5.14.1
