@@ -255,8 +255,6 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 # contact
-from flask import request, redirect, url_for, render_template, flash
-from flask_mail import Message
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
