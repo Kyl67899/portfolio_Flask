@@ -58,6 +58,7 @@ This project simplifies building and deploying a dynamic portfolio website. The 
 - 🔐 **User Authentication & Admin:** Facilitates secure management of content and contacts.
 - 📦 **Environment Consistency:** Managed dependencies via requirements.txt for reliable setups.
 - 📊 **Full-stack Functionality:** Integrates project management, contact handling, and admin controls.
+- <strong>Need to create a database and add the string connection to the .env file. DO NOT EXPOSE YOUR API KEY</strong>
 
 ---
 
