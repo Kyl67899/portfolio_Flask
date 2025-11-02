@@ -113,7 +113,7 @@ This project simplifies building and deploying a dynamic portfolio website. The 
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/Kyl67899/portfolio_Flask/blob/master/app.py'>app.py</a></b></td>
 					<td style='padding: 8px;'>- Provides the core web application logic for a portfolio platform built with Flask, integrating project management, contact handling, and admin functionalities<br>- Facilitates dynamic content rendering, user authentication, and database interactions with PostgreSQL, enabling efficient management and display of projects, contact messages, and administrative controls within a cohesive architecture.
-					<strong>Need to create a database and add the string connection to the .env file. DO NOT EXPOSE YOUR API KEY</strong></td>
+					</td>
 				</tr>
 				<tr style='border-bottom: 1px solid #eee;'>
 					<td style='padding: 8px;'><b><a href='https://github.com/Kyl67899/portfolio_Flask/blob/master/README.md'>README.md</a></b></td>
